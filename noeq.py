@@ -27,6 +27,10 @@ class Noeq:
         self.conn = socket.create_connection(server)
         self.auth()
 
+    def disconnect(self):
+        self.conn.shutdown(socket.SHUT_RDWR)
+        self.conn.close()
+
     def auth(self):
         if self.token != "":
             self.conn.sendall("\000{:c}{:s}".format(len(self.token), self.token))
@@ -50,4 +54,5 @@ if __name__ == '__main__':
     c = Noeq("",'localhost:4444')
     c.connect()
     print c.get(40)
+    c.disconnect()
 
