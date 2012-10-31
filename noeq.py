@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+__version__ = '1.0'
+
 from random import randint
 import socket
 import struct
