@@ -3,6 +3,13 @@ python-noeq
 
 python client library for noeqd
 
+install
+=======
+
+Install with pip:
+
+	sudo pip install noeq
+
 links
 =====
 
